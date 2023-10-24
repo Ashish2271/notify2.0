@@ -1,25 +1,6 @@
 const nodeMailer = require("nodemailer");
 const { google } = require('googleapis');
-// const sendEmail = async (options) => {
-//   const transporter = nodeMailer.createTransport({
-//     host: process.env.SMPT_HOST,
-//     port: process.env.SMPT_PORT,
-//     service: process.env.SMPT_SERVICE,
-//     auth: {
-//       user: process.env.SMPT_MAIL,
-//       pass: process.env.SMPT_PASSWORD,
-//     },
-//   });
 
-//   const mailOptions = {
-//     from: process.env.SMPT_MAIL,
-//     to: options.email,
-//     subject: options.subject,
-//     text: options.message,
-//   };
-
-//   await transporter.sendMail(mailOptions);
-// };
 const oAuth2Client = new google.auth.OAuth2(
   process.env.CLIENT_ID,
   process.env.CLEINT_SECRET,
